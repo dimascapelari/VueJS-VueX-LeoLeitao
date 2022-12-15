@@ -30,8 +30,9 @@ export default {
       this.sequencia++;
       // eslint-disable-next-line
       console.log(produto);
+      // this.$store.state.produtos.push(produto);
 
-      this.$store.state.produtos.push(produto);
+      this.$store.commit("adicionarProduto", produto);
     },
   },
 };
