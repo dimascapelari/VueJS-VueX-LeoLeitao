@@ -6,7 +6,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     // Quer dizer estado compartilhado
     state: {
-        produtos: []
+        produtos: [],
+        quantidade: 2,
+        preco: 19.99
     },
 
     // Funções que leem o estado e fazem algum tipo de processamento
@@ -23,6 +25,13 @@ export default new Vuex.Store({
     mutations: {
         adicionarProduto(state, produto) {
             state.produtos.push(produto)
+        },
+
+        setQuantidade(state, payload) {
+            state.quantidade = payload
+        },
+        setPreco(state, payload) {
+            state.preco = payload
         }
     },
 

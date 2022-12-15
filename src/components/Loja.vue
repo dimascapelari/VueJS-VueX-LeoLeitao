@@ -17,10 +17,18 @@ export default {
   data() {
     return {
       sequencia: 1,
-      quantidade: 1,
-      preco: 9.99,
     };
   },
+
+  computed: {
+    quantidade() {
+      return this.$store.state.quantidade;
+    },
+    preco() {
+      return this.$store.state.preco;
+    },
+  },
+
   methods: {
     // ...mapActions(["adicionarProduto"]),
 
