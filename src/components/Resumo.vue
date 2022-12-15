@@ -9,23 +9,17 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
-  computed: {
-    total() {
-      return this.$store.getters.valorTotal;
-    },
-    produtos() {
-      return this.$store.state.produtos;
-    },
-  },
-  //   data() {
-  //     return {
-  //       produtos: [
-  //         { nome: "Produto 1", quantidade: 7, preco: 14.55 },
-  //         { nome: "Produto 2", quantidade: 10, preco: 22.99 },
-  //         { nome: "Produto 3", quantidade: 1, preco: 43.18 },
-  //       ],
-  //     };
+  computed: mapGetters({
+    total: "valorTotal",
+  }),
+  //   computed: mapGetters(["valorTotal"]),
+  //   computed: {
+  //     total() {
+  //       return this.$store.getters.valorTotal;
+  //     },
   //   },
 };
 </script>
