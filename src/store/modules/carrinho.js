@@ -1,4 +1,7 @@
 export default {
+    // namespaced: true,
+
+
     // Quer dizer estado compartilhado
     state: {
         produtos: [],
